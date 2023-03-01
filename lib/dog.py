@@ -42,8 +42,8 @@ class Dog:
         dog.id = id
         return dog
     
-    @staticmethod
-    def get_all():
+    @classmethod
+    def get_all(cls):
         CURSOR.execute("SELECT * FROM dogs")
         rows = CURSOR.fetchall()
         dogs = []
